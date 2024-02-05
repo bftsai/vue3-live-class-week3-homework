@@ -18,7 +18,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="item in products" :key="item.title" class="text-center">
+              <tr v-for="item in products" :key="item.id" class="text-center">
                 <td class="w-50 text-start">{{ item.title }}</td>
                 <td>{{ item.origin_price }}</td>
                 <td>{{ item.price }}</td>

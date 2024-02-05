@@ -2,13 +2,13 @@
     <nav>
         <ul class="pagination justify-content-center">
             <li class="page-item" :class="{'disabled':!paginationObj.has_pre}">
-                <a class="page-link" :class="{'text-dark':!paginationObj.has_pre}" @click="changePage">Previous</a>
+                <a class="page-link" :class="{'text-dark':!paginationObj.has_pre}" @click.prevent="changePage">Previous</a>
             </li>
             <li class="page-item" :class="{'active':paginationObj.current_page===key+1}" v-for="(item,key) in paginationObj.total_pages" :key="'key' + key">
-                <a class="page-link" :class="{'text-dark':paginationObj.current_page===key+1}" @click="changePage">{{ key+1 }}</a>
+                <a class="page-link" :class="{'text-dark':paginationObj.current_page===key+1}" @click.prevent="changePage">{{ key+1 }}</a>
             </li>
             <li class="page-item" :class="{'disabled':!paginationObj.has_next}">
-                <a class="page-link" :class="{'text-dark':!paginationObj.has_next}" @click="changePage">Next</a>
+                <a class="page-link" :class="{'text-dark':!paginationObj.has_next}" @click.prevent="changePage">Next</a>
             </li>
         </ul>
     </nav>

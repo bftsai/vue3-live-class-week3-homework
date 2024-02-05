@@ -74,7 +74,7 @@
                             <div class="mb-3 d-flex align-items-center">
                                 <label for="origin_price" class="form-label">Origin_price：</label>
                                 <div class="w-100 d-flex flex-column">
-                                    <v-field type="number" id="origin_price" class="form-control" :class="{'is-invalid': errors.Origin_price}" name="Origin_price" v-model="tempProduct.origin_price" rules="required"></v-field>
+                                    <v-field type="number" id="origin_price" class="form-control" :class="{'is-invalid': errors.Origin_price}" name="Origin_price" v-model.number="tempProduct.origin_price" min="0" rules="required"></v-field>
                                     <error-message class="invalid-feedback" name="Origin_price"></error-message>
                                 </div>
                             </div>
@@ -83,7 +83,7 @@
                             <div class="mb-3 d-flex align-items-center">
                                 <label for="price" class="form-label">Price：</label>
                                 <div class="w-100 d-flex flex-column">
-                                    <v-field type="number" id="price" class="form-control" :class="{'is-invalid': errors.Price}" name="Price" v-model="tempProduct.price" rules="required"></v-field>
+                                    <v-field type="number" id="price" class="form-control" :class="{'is-invalid': errors.Price}" name="Price" v-model.number="tempProduct.price" min="0" rules="required"></v-field>
                                     <error-message class="invalid-feedback" name="Price"></error-message>
                                 </div>
                             </div>
